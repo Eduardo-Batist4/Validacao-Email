@@ -1,0 +1,150 @@
+@import "variable.scss";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+body{
+    overflow: hidden;
+}
+
+// ======= Background =======
+.background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -1;
+    img{
+        width: 100%;
+        height: 100%;
+    }
+}
+
+// ======= Main =======
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    padding: 0 10rem;
+    .text-container{
+        width: 100%;
+        height: 100%;
+        h1{
+            font-size: 8rem;
+            margin-bottom: 3rem;
+            color: $secundary;
+            font-family: $fontTitle;
+        }
+        h5{
+            margin-top: 20%;
+            margin-bottom: 3rem;
+            font-size: 2rem;
+            color: $secundary;
+            font-family: $fontTitle;
+        }
+        p{
+            margin-top: 1rem;
+            font-size: 1.8rem;
+            color: $secundary;
+            font-family: $fontTitle;
+        }
+    }
+    .register-login-container{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .form-container{
+            position: relative;
+            width: 35rem;
+            background-color: #35343444;
+            padding: 4rem;
+            border-radius: 2rem;
+            backdrop-filter: blur(20px);
+            box-shadow: 0 0 10px rgba(249, 249, 249, 0.564);
+            label{
+                font-size: 2rem;
+                font-weight: bold;
+                margin-left: 1.3rem;
+                color: $secundary;
+                font-family: $fontTitle;
+            }
+            input{
+                margin-top: 1rem;
+                margin-bottom: 2rem;
+                width: 100%;
+                padding: 1.5rem 1.5rem;
+                border-radius: 3rem;
+                outline: none;
+                border: none;
+                // background-color: rgba(253, 253, 253, 0.338);
+                background-color: $secundary;
+                box-shadow: 0 0 10px rgba(91, 91, 91, 0.461);
+            }
+            .success{
+                border: 1px solid $success;
+            }
+            .inputError{
+                border: 1px solid $error;
+            }
+            .error{
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+                margin-left: 1.3rem;
+                display: none;
+                border: 1px solid $error;
+                padding: 1rem;
+                // border-radius: 2rem;
+                p{
+                    color: $error;
+                }
+            }
+            .messageErrorOn{
+                display: block;
+            }
+            .btn-submit{
+                font-size: 2rem;
+                font-weight: bold;
+                padding: 1.5rem 3.5rem;
+                width: 100%;
+                border-radius: 3rem;
+                margin-top: 2rem;
+                background-color: $primary;
+                border: none;
+                color: $secundary;
+                box-shadow: 0 0 10px #20171c37;
+                cursor: pointer;
+                font-family: $fontTitle;
+                &:hover{
+                    transform: scale(1.02);
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ========= Breakpoint =========
+// ========= Small Devices =========
+// ========= Medium Devices =========
+// ========= big Devices =========
