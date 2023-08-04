@@ -17,6 +17,10 @@ form.addEventListener("submit", (e) => {
 
         validatePassword(userInputs.password.value);
         userInputs.password.classList.add("success");
+
+        userInputs.name.value = "";
+        userInputs.email.value = "";
+        userInputs.password.value = "";
     }catch (err){
         userInputs.email.classList.add("inputError");
         userInputs.password.classList.add("inputError");
