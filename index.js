@@ -62,7 +62,13 @@ function validatePassword(password) {
 
 
 
+// Evento Info login
 
+const btnInfo = document.getElementById("btn-info")
+
+btnInfo.addEventListener("mouseover", () => {
+    console.log("oi")
+})
 
 
 
