@@ -5,6 +5,7 @@ const userInputs = {
 };
 
 const form = document.getElementById("form");
+const loginSuccessModal = document.querySelector(".modalSuccessLogin");
 
 form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -18,14 +19,19 @@ form.addEventListener("submit", (e) => {
         validatePassword(userInputs.password.value);
         userInputs.password.classList.add("success");
 
+        loginSuccessModal.classList.add("modalOn");
+        // Tirando o Overflow do body
+        document.body.style.overflow = "hidden";
+
         userInputs.name.value = "";
         userInputs.email.value = "";
         userInputs.password.value = "";
+
     }catch (err){
         userInputs.email.classList.add("inputError");
         userInputs.password.classList.add("inputError");
         document.querySelector("#messageError").classList.add("messageErrorOn");
-        console.log(err)
+        console.log(err);
     };
 });
 
@@ -44,6 +50,7 @@ function resetFormStyles(inputs) {
     inputs.password.classList.remove("inputError");
     inputs.name.classList.remove("success");
     inputs.email.classList.remove("success");
+    inputs.password.classList.remove("success");
     document.querySelector("#messageError").classList.remove("messageErrorOn");
 };
 
@@ -63,7 +70,14 @@ function validatePassword(password) {
 };
 
 
+// Fechando Modal
+const closeModal = document.getElementById("closeModal");
 
+closeModal.addEventListener("click", () => {
+    loginSuccessModal.classList.remove("modalOn");
+    resetFormStyles(userInputs);
+    document.body.style.overflow = "auto";
+});
 
 
 

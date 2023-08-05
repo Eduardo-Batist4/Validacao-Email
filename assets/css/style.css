@@ -72,16 +72,6 @@ body {
   backdrop-filter: blur(20px);
   box-shadow: 0 0 10px rgba(249, 249, 249, 0.564);
 }
-.main .register-login-container .form-container .infoIcon {
-  font-size: 2rem;
-  cursor: pointer;
-  border: none;
-  background-color: transparent;
-  color: rgba(121, 120, 120, 0.598);
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-}
 .main .register-login-container .form-container label {
   font-size: 2rem;
   font-weight: bold;
@@ -137,7 +127,50 @@ body {
   transform: scale(1.02);
 }
 
-@media (max-width: 1400px) {
+.modalSuccessLogin {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4196078431);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+.modalSuccessLogin .modal-container {
+  background-color: white;
+  border-radius: 1rem;
+  width: 40rem;
+  height: 15rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.modalSuccessLogin .modal-container .btn-closeModal {
+  font-family: "Poiret One", cursive;
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  font-size: 2.5rem;
+  cursor: pointer;
+  color: #f6a0d1;
+  background-color: transparent;
+  border: none;
+}
+.modalSuccessLogin .modal-container h5 {
+  font-size: 2.5rem;
+  color: #06d106;
+}
+
+.modalOn {
+  display: flex;
+}
+
+@media (min-width: 1400px) {
   .main .text-container {
     text-align: center;
   }
@@ -202,6 +235,10 @@ body {
   }
   .main .register-login-container .form-container {
     width: 100%;
+  }
+  .modalSuccessLogin .modal-container {
+    text-align: center;
+    width: 95%;
   }
 }
 

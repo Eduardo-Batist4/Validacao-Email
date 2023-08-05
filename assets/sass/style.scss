@@ -4,14 +4,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+};
 
 html{
     font-size: 62.5%;
-}
+};
 body{
     overflow: hidden;
-}
+};
 
 // ======= Background =======
 .background{
@@ -22,8 +22,8 @@ body{
     img{
         width: 100%;
         height: 100%;
-    }
-}
+    };
+};
 
 // ======= Main =======
 .main{
@@ -55,7 +55,7 @@ body{
             color: $secundary;
             font-family: $fontTitle;
         }
-    }
+    };
     .register-login-container{
         flex-basis: 40rem;
         flex-grow: 1;
@@ -76,7 +76,7 @@ body{
                 font-weight: bold;
                 color: $dark;
                 font-family: $fontTitle;
-            }
+            };
             input{
                 margin-top: 1rem;
                 margin-bottom: 2rem;
@@ -88,13 +88,13 @@ body{
                 border-right: none;
                 outline: none;
                 background-color: transparent;
-            }
+            };
             .success{
                 border-bottom: 1px solid $success;
-            }
+            };
             .inputError{
                 border-bottom: 1px solid $error;
-            }
+            };
             .error{
                 margin-bottom: 2rem;
                 font-size: 1.6rem;
@@ -103,11 +103,11 @@ body{
                 padding: 1rem;
                 p{
                     color: $error;
-                }
-            }
+                };
+            };
             .messageErrorOn{
                 display: block;
-            }
+            };
             .btn-submit{
                 font-size: 2rem;
                 font-weight: bold;
@@ -123,44 +123,86 @@ body{
                 font-family: $fontTitle;
                 &:hover{
                     transform: scale(1.02);
-                }
-            }
-        }
-    }
-}
+                };
+            };
+        };
+    };
+};
+
+// ======= Modal =======
+.modalSuccessLogin{
+    width: 100%;
+    height: 100vh;
+    background-color: #0000006b;
+    backdrop-filter: blur(5px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .modal-container{
+        background-color: white;
+        border-radius: 1rem;
+        width: 40rem;
+        height: 15rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .btn-closeModal{
+            font-family: $fontTitle;
+            position: absolute;
+            top: 1rem;
+            right: 1.5rem;
+            font-size: 2.5rem;
+            cursor: pointer;
+            color: $primary;
+            background-color: transparent;
+            border: none;
+        };
+        h5{
+            font-size: 2.5rem;
+            color: $success;
+        };
+    };
+};
+.modalOn{
+    display: flex;
+};
 
 // ========= Breakpoint =========
 
-
 // ========= big Devices =========
-@media (max-width: 1400px) {
+@media (min-width: 1400px) {
     .main{
         .text-container{
             text-align: center;
-        }
-    }
-}
+        };
+    };
+};
 @media (max-width: 1200px) {
     .main{
         padding: 0 5rem;
-    }
-}
+    };
+};
 @media (max-width: 920px) {
     .main{
         padding: 0 3rem;
         .text-container{
             flex-basis: 35rem;
-        }
+        };
         .register-login-container{
             flex-basis: 35rem;
-        }
-    }
-}
+        };
+    };
+};
 // ========= Medium Devices =========
 @media (max-width: 790px) {
     .background{
         display: none;
-    }
+    };
     body{
         background-image: url(/assets/images/wallpaper.png);
         background-size: cover;
@@ -177,14 +219,14 @@ body{
             text-align: center;
             h5{
                 margin-top: 5%;
-            }
-        }
+            };
+        };
         .register-login-container{
             padding: 2rem 0;
             height: 100%;
-        }
-    }
-}
+        };
+    };
+};
 // ========= Small Devices =========
 @media (max-width: 450px) {
     .main{
@@ -193,19 +235,25 @@ body{
         .text-container{
             h1{
                 font-size: 4.5rem;
-            }
+            };
             h5{
                 font-size: 2rem;
             }
             p{
 
                 font-size: 1.6rem;
-            }
-        }
+            };
+        };
         .register-login-container{
             .form-container{
                 width: 100%;
-            }
-        }
-    }
-}
+            };
+        };
+    };
+    .modalSuccessLogin{
+        .modal-container{
+            text-align: center;
+            width: 95%;
+        };
+    };
+};
