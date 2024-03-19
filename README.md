@@ -5,7 +5,7 @@
 - Tela de Login com Validação
 - Responsivo
 
-https://Eduardo-Batist4.github.io/Validacao-Email/
+https://eduardo-batist4.github.io/Validacao-Login/
 
 
 ## Descrição
