@@ -176,8 +176,15 @@ body{
         .text-container{
             text-align: center;
             width: 50%;
+            .text{
+                width: 90%;
+                margin: 0 auto;
+            }
             h5{
-                margin-top: 25rem;
+                margin-top: 13rem;
+            }
+            h1{
+                font-size: 7rem;
             }
         };
         .register-login-container{
